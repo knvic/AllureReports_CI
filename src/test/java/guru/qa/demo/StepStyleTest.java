@@ -38,11 +38,6 @@ public class StepStyleTest extends BaseTest {
         $(withText("#" + issue)).should(Condition.exist);
     }
 
-    /*@Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot)WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }*/
-
     @Test
     void webStepTest() {
         openMainPage();
