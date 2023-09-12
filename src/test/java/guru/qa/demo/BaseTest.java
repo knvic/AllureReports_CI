@@ -13,12 +13,10 @@ public class BaseTest {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("Allure", new AllureSelenide());
-        System.setProperty("webdriver.chrome.driver", "C:\\QA\\chromedriver-win64\\chromedriver-win64_116\\chromedriver.exe");
-        //System.setProperty("webdriver.chrome.driver", "D:\\Dev\\QA\\chromedriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         Configuration.baseUrl = "https://github.com/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 5_000;
-        //Configuration.holdBrowserOpen=true;
+
     }
 }
