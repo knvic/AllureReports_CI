@@ -18,7 +18,7 @@ public class MainPageTest extends BaseTest{
         open("https://gismeteo.ru");
         $(".search-label").click();
         $("[type=search]").setValue("Пятигорск");
-        $(".city-text").shouldBe(text("Россия, Ставропольский край, Пятигорск (городской округ)")).click();
+        $(".city-text").shouldBe(text("РоссияW, Ставропольский край, Пятигорск (городской округ)")).click();
 
     }
 
