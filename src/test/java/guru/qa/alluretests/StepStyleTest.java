@@ -41,12 +41,7 @@ public class StepStyleTest extends BaseTest {
     public void checkIssueWithNumber(int issue) {
         $(withText("#" + issue)).should(Condition.exist);
     }
-
-    @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
-
+    
     @Test
     void webStepTest() {
         openMainPage();
