@@ -1,4 +1,4 @@
-package guru.qa.demo;
+package guru.qa.alluretests;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
