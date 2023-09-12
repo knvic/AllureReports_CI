@@ -2,8 +2,8 @@ package guru.qa.alluretests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Attachment;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -47,6 +47,13 @@ public class StepStyleTest extends BaseTest {
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
+
+    @Feature("Issue в репозитории")
+    @Story("Создание Issue")
+    @Owner("krivorotovnv")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(value = "Testing", url = "https://github.com")
+    @DisplayName("Поиск Issue для авторизованного пользователя с помощью annotated Steps")
     @Test
     void webStepTest() {
         openMainPage();

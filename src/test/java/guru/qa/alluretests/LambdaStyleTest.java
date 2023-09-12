@@ -1,6 +1,8 @@
 package guru.qa.alluretests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -12,6 +14,12 @@ import static org.openqa.selenium.By.linkText;
 public class LambdaStyleTest extends BaseTest {
 
 
+    @Feature("Issue в репозитории")
+    @Story("Создание Issue")
+    @Owner("krivorotovnv")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(value = "Testing", url = "https://github.com")
+    @DisplayName("Создание Issue для авторизованного пользователя с помощью Lambda Steps")
     @Test
     void lambdaStepTest() {
         step("Открываем главную страницу", () -> {
