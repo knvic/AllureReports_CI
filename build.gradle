@@ -36,8 +36,10 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+
     testImplementation('org.seleniumhq.selenium:selenium-java:4.8.1')
     testImplementation('com.codeborne:selenide:6.12.3')
+    implementation group: 'io.qameta.allure', name: 'allure-selenide', version: '2.24.0'
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

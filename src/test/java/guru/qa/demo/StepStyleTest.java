@@ -8,9 +8,8 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
-import com.codeborne.selenide.Configuration;
 
-public class WebStepTest extends BaseTest{
+public class StepStyleTest extends BaseTest {
 
     @Step("Открываем главную страницу")
     public void openMainPage() {
@@ -46,7 +45,6 @@ public class WebStepTest extends BaseTest{
 
     @Test
     void webStepTest() {
-        // WebSteps steps = new WebSteps();
         openMainPage();
         searchRepository(REPOSITORY);
         clickOnRepository(REPOSITORY);
