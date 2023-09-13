@@ -16,8 +16,5 @@ public class BaseTest {
         Configuration.baseUrl = "https://github.com/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 5_000;
-
-
     }
 }

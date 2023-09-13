@@ -5,6 +5,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -26,7 +27,7 @@ public class LambdaStyleTest extends BaseTest {
         Allure.link("Testing", "https://testing.github.com");
 
         step("Открываем главную страницу", () -> {
-            open("https://github.com");
+            open(baseUrl);
         });
         step("Ищем репозиторий " + REPOSITORY, () -> {
             $(".search-input").click();

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -17,7 +18,7 @@ public class StepStyleTest extends BaseTest {
 
     @Step("Открываем главную страницу")
     public void openMainPage() {
-        open("https://github.com");
+        open(baseUrl);
     }
 
     @Step("Ищем репозиторий {REPOSITORY}")
@@ -27,7 +28,7 @@ public class StepStyleTest extends BaseTest {
         $("#query-builder-test").submit();
     }
 
-    @Step("Кликаем по ссылке репозитория {repo}")
+    @Step("Кликаем по ссылке репозитория {REPOSITORY}")
     public void clickOnRepository(String repo) {
         $(linkText(repo)).click();
     }
