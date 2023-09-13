@@ -14,14 +14,17 @@ import static org.openqa.selenium.By.linkText;
 public class LambdaStyleTest extends BaseTest {
 
 
-    @Feature("Issue в репозитории")
-    @Story("Создание Issue")
-    @Owner("krivorotovnv")
-    @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://github.com")
-    @DisplayName("Создание Issue для авторизованного пользователя с помощью Lambda Steps")
     @Test
     void lambdaStepTest() {
+        Allure.getLifecycle().updateTestCase(
+                t -> t.setName("Создание Issue для авторизованного пользователя")
+        );
+        Allure.feature("Issue в репозитории");
+        Allure.story("Создание Issue");
+        Allure.label("owner", "krivorotovnv");
+        Allure.label("severity", SeverityLevel.CRITICAL.value());
+        Allure.link("Testing", "https://testing.github.com");
+
         step("Открываем главную страницу", () -> {
             open("https://github.com");
         });
