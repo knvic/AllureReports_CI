@@ -15,7 +15,6 @@ jobs:
               distribution: 'zulu'
               java-version: '17'
         # Пример однолинейного простого скрипта shell
-       - name: Make gradlew executable
        - run: chmod +x ./gradlew
        - run: ./gradlew clean test
 
