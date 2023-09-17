@@ -16,8 +16,7 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-gradlew.bat
-gradlew
+
 gradle/wrapper
 settings.gradle
 browsers.json
