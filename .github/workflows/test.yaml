@@ -1,0 +1,20 @@
+name: Test
+on: [push]
+ # jobs запускаются параллельно, если не указана последовательность
+jobs:
+  # Название job вы можете назвать как угодно
+ test:
+  # Операционная система в виртуальной машине, в которой запускаются процессы
+    runs-on: ubuntu-latest
+    # Шаги
+    steps:
+      # Actions от github: проверяет репозиторий, гит и т.д.
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+        # Пример однолинейного простого скрипта shell
+      - name: Run a one-line script
+      - run: ./gradlew clean test
+
