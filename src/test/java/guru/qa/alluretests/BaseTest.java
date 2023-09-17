@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 public class BaseTest {
 
     public static final String REPOSITORY = "spring-projects/spring-boot";
-    public static final int ISSUE = 37258;
+    public static final int ISSUE = 37437;
 
     @BeforeAll
     static void beforeAll() {
